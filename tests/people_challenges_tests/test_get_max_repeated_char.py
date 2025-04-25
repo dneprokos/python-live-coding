@@ -1,6 +1,5 @@
 import pytest
-
-from challenges.people_challanges.find_max_repeated_chars_in_string import get_max_repeated_char
+from challenges.people_challenges.find_max_repeated_chars_in_string import get_max_repeated_char
 
 
 def test_basic_sentence():

@@ -1,5 +1,5 @@
 import pytest
-from challenges.people_challanges.fizz_buzz_challenge import fizz_buzz_solving
+from challenges.people_challenges.fizz_buzz_challenge import fizz_buzz_solving
 
 
 def test_should_return_fizz():
