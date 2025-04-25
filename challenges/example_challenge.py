@@ -1,5 +1,23 @@
 # Challange: Create a function that adds to integers and returns the result
 
+"""
+Complete the function  to compute the sum of two integers.
+
+Example
+
+
+Return .
+
+Function Description
+
+Complete the  function with the following parameters:
+
+: the first value
+: the second value
+Returns
+- : the sum of  and 
+"""
+
 
 def add(a: int, b: int) -> int:
     """
