@@ -46,7 +46,7 @@ Recommended Extensions
 ### Clone the repository
 
 ```bash
-git clone https://github.com/your-username/python-live-coding.git
+git clone https://github.com/dneprokos/python-live-coding.git
 cd python-live-coding
 ```
 
@@ -132,7 +132,7 @@ Input validation (raise TypeError if needed)
 
 Example:
 
-```bash
+```python
 def reverse_string(s: str) -> str:
     """
     Reverses the input string.
@@ -159,7 +159,7 @@ tests/test_reverse_string.py
 
 Example:
 
-```bash
+```python
 from challenges.reverse_string import reverse_string
 import pytest
 
@@ -174,4 +174,4 @@ def test_reverse_non_string_input():
         reverse_string(123)
 ```
 
-4. Run the tests. See Running tests section above
+4. Run the tests. See "Running tests" section above
