@@ -1,3 +1,5 @@
+from typing import List, Dict
+
 employees = [
     {"name": "Oleksandr Petrenko", "experience": 5, "position": "Developer"},
     {"name": "Maria Kovalenko", "experience": 2, "position": "Designer"},
@@ -11,21 +13,17 @@ employees = [
 # Create a function that takes array above and return unique (no duplicates) first names for employees work 3 and more years
 
 
-def find_unique_first_name(employees: list[str]) -> list[str]:
-    return set(emp.get("name").split(' ')[0] for emp in employees if emp.get("experience") >= 3)
+def find_unique_first_name(employees: List[Dict[str, str]]) -> List[str]:
+    return list(set(emp.get("name").split(' ')[0] for emp in employees if emp.get("experience") >= 3))
 
 
-def find_unqiue_first_names_without_duplicates(employees: list[str]) -> list[str]:
+def find_unqiue_first_names_without_duplicates(employees: List[Dict[str, str]]) -> List[str]:
     duplicates = dict()
 
     for emp in employees:
-        if (emp.get("experience") >= 3):
+        if emp.get("experience") >= 3:
             first_name = emp.get("name").split(' ')[0]
-
-            if duplicates.get(first_name):
-                duplicates[first_name] += 1
-            else:
-                duplicates[first_name] = 1
+            duplicates[first_name] = duplicates.get(first_name, 0) + 1
 
     return [key for key, value in duplicates.items() if value == 1]
 
